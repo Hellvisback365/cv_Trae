@@ -1,5 +1,5 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -7,6 +7,20 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Variabili tema scuro (default) */
+  --background-gradient: linear-gradient(to bottom, rgba(36,36,36,0.95) 0%, rgba(18,18,18,0.98) 100%);
+  --card-background: rgba(36,36,36,0.85);
+  --text-primary: #e0e6f7;
+  --text-secondary: #b3cfff;
+}
+
+[data-theme='light'] {
+  /* Variabili tema chiaro */
+  --background-gradient: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
+  --card-background: rgba(255, 255, 255, 0.9);
+  --text-primary: #2d3748;
+  --text-secondary: #4a5568;
 }
 
 :root[data-theme="dark"] {

@@ -1,7 +1,6 @@
 import "./App.css";
 import NeuralBackground from "./components/NeuralBackground";
 import { useTheme } from "./context/ThemeContext";
-import { Moon, Sun } from 'lucide-react';
 import Navbar from "./components/Navbar";
 import ChiSono from "./components/ChiSono";
 import EsperienzeProfessionali from "./components/EsperienzeProfessionali";

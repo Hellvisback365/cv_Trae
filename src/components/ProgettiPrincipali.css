@@ -1,78 +1,103 @@
+/* ProgettiPrincipali.css */
+:root {
+  --bg-gradient: linear-gradient(135deg, #ffffff 0%, #ffffff 0%);
+  --card-bg: #ffffff;
+  --text-primary: #333;
+  --text-secondary: #666;
+  --accent: #4e6cff;
+  --tag-bg: rgba(78, 108, 255, 0.1);
+}
+
+[data-theme="dark"] {
+  --bg-gradient: linear-gradient(135deg, #141414 0%, #0d0d0d 100%);
+  --card-bg: #0000009c;
+  --text-primary: #e0e6f7;
+  --text-secondary: #b3cfff;
+  --accent: #7faaff;
+  --tag-bg: rgba(127, 170, 255, 0.13);
+}
+
 .progetti-principali {
   padding: 4rem 2rem;
-  background: linear-gradient(to bottom, rgba(36,36,36,0.95) 0%, rgba(18,18,18,0.98) 100%);
+  background: var(--bg-gradient);
+  transition: background 0.5s ease;
 }
 
 .progetti-principali h2 {
   font-size: 2.8rem;
-  color: #7faaff;
-  margin-bottom: 1.5rem;
   text-align: center;
-  background: linear-gradient(90deg, #7faaff 0%, #4e6cff 100%);
+  background: linear-gradient(90deg, var(--accent) 0%, #4e6cff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.progetti-principali p {
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: 2.5rem;
 }
 
 .progetti-card {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2.5rem;
-  padding: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
 .progetto {
-  background: rgba(36,36,36,0.85);
-  border-radius: 18px;
-  padding: 1.8rem;
-  transition: transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s;
+  background: var(--card-bg);
+  border-radius: 1.125rem;
+  padding: 2rem;
   border: 1px solid rgba(100,108,255,0.15);
-}
-
-.progetto:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(100,108,255,0.15);
+  overflow: hidden;
 }
 
 .progetto-type {
-  color: #b3cfff;
-  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
   font-weight: 600;
-  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
 }
 
 .progetto-title {
-  font-size: 1.6rem;
-  color: #fff;
-  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
 }
 
 .progetto-description {
-  color: #e0e6f7;
-  line-height: 1.7;
+  color: var(--text-secondary);
+  line-height: 1.6;
   margin-bottom: 1.5rem;
 }
 
 .progetto-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem;
+  gap: 0.5rem;
 }
 
 .progetto-tags span {
-  background: rgba(100,108,255,0.13);
-  color: #b3cfff;
+  background: var(--tag-bg);
+  color: var(--text-secondary);
   padding: 0.4rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  transition: background 0.2s;
+  border-radius: 1rem;
+  font-size: 0.85rem;
+  transition: background 0.3s;
 }
 
 @media (max-width: 768px) {
-  .progetti-card {
-    grid-template-columns: 1fr;
-    padding: 1rem;
+  .progetti-principali {
+    padding: 2rem 1rem;
   }
   .progetto {
-    padding: 1.2rem;
+    padding: 1.5rem;
   }
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
