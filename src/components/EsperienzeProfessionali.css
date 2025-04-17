@@ -1,0 +1,130 @@
+.esperienze-professionali {
+  padding: 4rem 2rem;
+  background: linear-gradient(to bottom, rgba(36,36,36,0.95) 0%, rgba(18,18,18,0.98) 100%);
+}
+
+.esperienze-professionali h2 {
+  font-size: 2.8rem;
+  color: #7faaff;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  background: linear-gradient(90deg, #7faaff 0%, #4e6cff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.esperienze-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  padding: 2rem 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.esperienze-card::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background: linear-gradient(to bottom, rgba(100,108,255,0.4), rgba(100,108,255,0.15));
+}
+
+.esperienza-wrapper {
+  position: relative;
+  padding-left: 0;
+  width: 45%;
+  margin-right: auto;
+}
+
+.esperienza-wrapper::before {
+  content: '';
+  position: absolute;
+
+  left: calc(100% + 3.2rem);
+  
+  top: 1.5rem;
+  width: 14px;
+  height: 14px;
+  background: #4e6cff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(100,108,255,0.2);
+  z-index: 1;
+}
+
+.esperienza {
+  background: rgba(36,36,36,0.85);
+  border-radius: 18px;
+  padding: 2rem;
+  border: 1px solid rgba(100,108,255,0.15);
+  transition: all 0.3s cubic-bezier(.4,0,.2,1);
+  position: relative;
+  overflow: hidden;
+}
+
+.esperienza:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(100,108,255,0.15);
+}
+
+.esperienze-date {
+  color: #b3cfff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.esperienze-title {
+  font-size: 1.6rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.esperienze-location {
+  color: #7faaff;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.esperienze-description {
+  color: #e0e6f7;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.esperienze-description ul {
+  text-align: left;
+  padding-left: 1.5rem;
+}
+
+.esperienze-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.esperienze-tags span {
+  background: rgba(100,108,255,0.13);
+  color: #b3cfff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+@media (max-width: 768px) {
+  .esperienze-card {
+    padding: 1rem 1rem 1rem 1rem;
+  }
+  .esperienza-wrapper {
+    width: 100%;
+    padding-left: 1rem;
+  }
+  .esperienza-wrapper::before {
+    left: -0.5rem;
+  }
+}
